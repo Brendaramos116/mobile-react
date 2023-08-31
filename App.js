@@ -18,8 +18,8 @@ export default function App() {
     <>
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="estado" component={Estado} options={{ title: "Use State" }} />
           <Stack.Screen name="objeto" component={Objeto} options={{ title: "Objeto" }} />
+          <Stack.Screen name="estado" component={Estado} options={{ title: "Use State" }} />
           <Stack.Screen name="arrays" component={Arrays} options={{ title: "Arrays" }} />
           <Stack.Screen name="pagina1" component={Pagina1} options={{ title: "Página Principal" }} />
           <Stack.Screen name="pagina2" component={Pagina2} options={{ title: "Página 2" }} />

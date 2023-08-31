@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 
+
 const styles = StyleSheet.create({
     linha: {
         flexDirection: 'row',
@@ -9,7 +10,20 @@ const styles = StyleSheet.create({
     },
     button: {
         padding: 10,        
-    }
+
+    },
+    content: {
+        flexDirection: 'column',
+        margin: 10,
+        justifyContent: 'center',
+    },
+    card: {
+        border: 'solid',
+        margin: 10,
+        backgroundColor: 'pink',     
+        
+    },
+
 })
 
 export default styles

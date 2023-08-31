@@ -1,9 +1,10 @@
 import React from 'react'
 import { Text } from 'react-native'
 import { Button, Card } from 'react-native-paper'
+import styles from '../styles/styles'
 
 
-const Objeto = () => {
+const Objeto = (props) => {
 
   const carros = [
     { marca: 'VW', modelo: 'Fusca', ano: 1978, cor: 'Preto', foto: 'http://2.bp.blogspot.com/_MGiZcWxFpoc/SZCZP3lcWoI/AAAAAAAAMUo/M5ynxbXR3p0/s800/fusca.jpg' },
@@ -15,13 +16,13 @@ const Objeto = () => {
     <>
       {carros.map(item => (
         <>
-          <Card mode='contained' style={{margin: 10}}>
+          <Card mode='contained' style={styles.card}>
             <Card.Cover source={item.foto} />
-            <Card.Content>
-              <Text variant="modelo">Modelo: {item.modelo}</Text>
-              <Text variant="Marca">Marca: {item.marca}</Text>
-              <Text variant="Ano">Ano: {item.ano}</Text>
-              <Text variant="Cor">Cor: {item.cor}</Text>
+            <Card.Content style={styles.content}>
+              <Text variant="modelo"><strong>Modelo:</strong> {item.modelo}</Text>
+              <Text variant="Marca"><strong>Marca:</strong> {item.marca}</Text>
+              <Text variant="Ano"><strong>Ano:</strong> {item.ano}</Text>
+              <Text variant="Cor"><strong>Cor:</strong> {item.cor}</Text>
             </Card.Content>
             <Card.Actions>
               <Button mode='elevated'>Cancel</Button>
@@ -35,4 +36,6 @@ const Objeto = () => {
 }
 
 export default Objeto
+
+
 
