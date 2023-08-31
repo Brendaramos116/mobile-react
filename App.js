@@ -9,6 +9,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Pagina3 from './screens/Pagina3';
 import Arrays from './screens/Arrays';
 import Objeto from './screens/Objeto';
+import Estado from './screens/Estado';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +18,7 @@ export default function App() {
     <>
       <NavigationContainer>
         <Stack.Navigator>
+          <Stack.Screen name="estado" component={Estado} options={{ title: "Use State" }} />
           <Stack.Screen name="objeto" component={Objeto} options={{ title: "Objeto" }} />
           <Stack.Screen name="arrays" component={Arrays} options={{ title: "Arrays" }} />
           <Stack.Screen name="pagina1" component={Pagina1} options={{ title: "Página Principal" }} />
